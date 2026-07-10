@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Event Seat Booking</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Event Seat Booking</h1>
+
+    <div class="top-actions">
+      <button onclick="seedData()">Load Sample Data</button>
+      <button onclick="showAddEventForm()">Add Event</button>
+      <button onclick="loadEvents()">Refresh Events</button>
+    </div>
+
+    <div id="addEventForm" class="form-box hidden">
+      <h3>Add Event</h3>
+      <input type="text" id="eventName" placeholder="Event name" />
+      <input type="text" id="eventDate" placeholder="Event date (YYYY-MM-DD)" />
+      <input type="text" id="eventVenue" placeholder="Venue" />
+      <input type="text" id="eventSeats" placeholder="Seats e.g. A1,A2,A3,B1,B2" />
+      <button onclick="createEvent()">Save Event</button>
+    </div>
+
+    <div id="events"></div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
